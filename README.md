@@ -10,6 +10,7 @@ Project "SUPERB-MED" for subject "Wstęp do Projektowania Aplikacji Internetowyc
 * [START](#start)
 * [QUIT](#quit)
 * [MAINTENANCE](#maintenance)
+* [STATUS](#status)
 
 
 
@@ -83,7 +84,7 @@ Project "SUPERB-MED" for subject "Wstęp do Projektowania Aplikacji Internetowyc
     try to refresh the website.
 
     
-    !!!Now, you can start to use and explore application. Feel free.!!!
+    !!!Now, you can start to use and explore application. Feel free!!!
 
 ## QUIT
 
@@ -100,3 +101,7 @@ Project "SUPERB-MED" for subject "Wstęp do Projektowania Aplikacji Internetowyc
     '''
     docker-compose build
     '''
+
+## STATUS
+    
+    The projest is still in development...
