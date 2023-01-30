@@ -1,40 +1,70 @@
 <!DOCTYPE html>
 <html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@200;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <title>LOGIN PAGE</title>
-</head>
-<body>
-    <div class="overlay"></div>
-    <div class="base-container">
-        <header>
-            <a href="login.html"><img src="../img/logo.svg" alt="SUPERB-MED LOGO"></a>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@200;400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <title>LOGIN PAGE</title>
+    </head>
+    <body>
+        <div class="overlay"></div>
+        <div class="base-container">
+            <header>
+                <a class="logo" href="home.html"><img src="../img/logo.svg" alt="SUPERB-MED LOGO"></a>
+                <nav>
+                    <ul>
+                        <li><a href="home.html">HOME</a></li>
+                        <li><a href="login.html" class="active">LOGIN</a></li>
+                        <li><a href="#">PERSONEL</a></li>
+                        <li><a href="#">KONTAKT</a></li>
         
-        </header>
-        <div class="bg" aria-hidden="true">
-            <div class="bg__dot"></div>
-            <div class="bg__dot"></div>
-        </div>
-        <form autocomplete="off"> 
-            <div class="form__icon" aria-hidden="true"></div>
-            <div class="form__input-container">
-                <input id="user" aria-label="User" type="text" placeholder=" ">
-                <label for="user">User</label>
+                
+                    </ul>
+                </nav>
+            </header>
+            <!--<div class="bg" aria-hidden="true">
+                <div class="bg__dot"></div>
+                <div class="bg__dot"></div>
             </div>
-    
-            <div class="form__input-container">
-                <input id="password" aria-label="Password" type="password" placeholder=" ">
-                <label for="password">Password</label>
+            <form autocomplete="off"> 
+                <div class="form__icon" aria-hidden="true"></div>
+                <div class="form__input-container">
+                    <input id="user" aria-label="User" type="text" placeholder=" ">
+                    <label for="user">User</label>
+                </div>
+        
+                <div class="form__input-container">
+                    <input id="password" aria-label="Password" type="password" placeholder=" ">
+                    <label for="password">Password</label>
+                </div>
+                <div class="form__spacer" aria-hidden="true"></div> 
+                <button>Login</button>
+            </form>
             </div>
-            <div class="form__spacer" aria-hidden="true"></div> 
-            <button>Login</button>
-        </form>
-    </div>
-</body>
+            -->
+        <footer class="footer">
+            <div class="container">
+                Przemyslaw Bryla &copy; 2023
+            </div>
+        </footer>
+        <section class="cookies-banner">
+            <div class="container">
+                <div class="cookies-banner-text">
+                    <h1>Ta strona używa plików cookies.</h1>
+                    <p>Zamykając ten baner wyrażasz zgodę na zbieranie danych o Twoich aktywnościach prowadzonych na stronie.</p>
+
+                </div>
+                <div class="cookies-banner-button">
+                    <a href="#" class="button button-orange button2">Close</a>
+
+                </div>
+
+            </div>
+        </section>
+        <script src="../js/script.js"></script>
+    </body>
 </html>
