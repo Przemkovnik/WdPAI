@@ -50,6 +50,7 @@ nav ul li a {
     text-transform: uppercase;
     font-size: 2rem;
     position: relative;
+    transition: color 0.5s;
 }
 
 nav ul li a.active::before {
@@ -59,6 +60,7 @@ nav ul li a.active::before {
     height: 1px;
     border-bottom: 2px solid black;
     bottom: 0;
+    transition: border-bottom 0.5s;
 }
 
 nav ul li a:before {
@@ -66,7 +68,7 @@ nav ul li a:before {
     content: "";
     width: 0%;
     height: 1px;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid rgb(170, 170, 170);
     bottom: 0;
     transition: width .3s;
 }
@@ -76,6 +78,14 @@ nav ul li a:before {
 
 nav ul li a:hover::before {
     width: 35%;
+}
+
+nav ul li a:hover {
+    color: rgb(170, 170, 170);
+}
+
+nav ul li a.active:hover::before {
+    border-bottom: 2px solid rgb(170, 170, 170);
 }
 
 /* footer */
@@ -116,6 +126,7 @@ nav ul li a:hover::before {
 }
 
 .button2 {
+    font-size: 1.5em;
     text-decoration: none;
     border-radius: 2em;
     transition: background-color 0.5s;
@@ -128,6 +139,35 @@ nav ul li a:hover::before {
 .button2:hover {
     background-color: #eb893e;
 }
+
+/* back to the top button */
+
+.back-to-top {
+    position: fixed;
+    right: 5rem;
+    bottom: 5rem;
+    border-radius: 100%;
+    background: #141c38;
+    padding: 0.5rem;
+    border: none;
+    cursor: pointer;
+    opacity: 100%;
+    transition: opacity 0.5s;
+  }
+  
+  .back-to-top:hover {
+    opacity: 60%;
+  }
+  
+  .hidden {
+    opacity: 0%;
+  }
+  
+  .back-to-top-icon {
+    width: 5rem;
+    height: 5rem;
+    color: #7ac9f9;
+  }
 
 /* media queries */
 
