@@ -451,7 +451,7 @@ nav ul li a.active:hover::before {
     }
 }
 
-main {
+.grow {
     animation: growIn 2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
     transform: scale(0.4);
 }
