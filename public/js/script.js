@@ -91,7 +91,7 @@ function() {
     let cookiesBanner = document.querySelector('.cookies-banner');
     let cookiesBannerCloseButton = document.querySelector('.cookies-banner-button .button');
 
-    let cookiesBannerDelay = 2000;
+    let cookiesBannerDelay = 2500;
     if (cookiesBanner) {
        setTimeout(showBanner,cookiesBannerDelay);
     }

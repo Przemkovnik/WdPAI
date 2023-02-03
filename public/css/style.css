@@ -20,7 +20,7 @@ body {
 .container {
     max-width: 75vw;
     margin: 0 auto;
-    padding: 1em 2em;
+    padding: 0em 2em;
 }
 
 .page-break {
@@ -343,7 +343,7 @@ p.doctor-price {
     cursor: pointer;
     font-size: 3rem;
     position: absolute;
-    top: 50%;
+    top: 47%;
     height: 2em;
     width: 2em;
     line-height: 2em;
@@ -494,7 +494,7 @@ main {
 }
 
 .cookies-banner h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-top: 0;
 }
 
@@ -586,6 +586,10 @@ main {
     nav {
         margin-right: 4vw;
     }
+
+    .container {
+        max-width: 80vw;
+    }
 }
 
 @media screen and (max-width: 1332px) {
@@ -599,6 +603,15 @@ main {
 
     nav {
         margin-right: 3vw;
+    }
+
+    .container {
+        max-width: 85vw;
+    }
+
+    .popup__close {
+        top: 0.4em;
+        right: 0.6em;
     }
 }
 
@@ -621,6 +634,11 @@ main {
     
     .popup__arrow--right {
         right: 5%;
+    }
+
+    .popup__close {
+        top: 0.35em;
+        right: 0.55em;
     }
 }
 
@@ -706,6 +724,15 @@ main {
     .gal {
         font-size: 4.9rem;
     }
+
+    .cookies-banner {
+        padding: 2.3em 0;
+    }
+
+    .cookies-banner h1 {
+        font-size: 1.7rem;
+        text-align: left;
+    }
 }
 
 @media screen and (max-width: 1099px) {
@@ -752,6 +779,10 @@ main {
         width: 60em;
         height: 40em;
         margin-bottom: 6em;
+    }
+
+    .cookies-banner {
+        padding: 2em 0;
     }
 }
 
@@ -884,6 +915,18 @@ main {
         font-size: 4rem;
         margin: 4em 0 0.5em 0;
     }
+
+    .cookies-banner .container{
+        padding: 0;
+    }
+
+    .cookies-banner-text {
+        padding: 0em 8em 0em 0em;
+    }
+
+    .cookies-banner-button {
+        padding: 0em 0em 0em 8em;
+    }
 }
 
 @media screen and (max-width: 690px) {
@@ -942,6 +985,35 @@ main {
     .gal {
         font-size: 3.8rem;
     }
+
+    .cookies-banner .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .cookies-banner-text {
+        padding: 0;
+    }
+
+    .cookies-banner h1 {
+        text-align: center;
+    }
+
+    .cookies-banner p {
+        text-align: center;
+    }
+
+    .cookies-banner-button {
+        padding: 0;
+        margin-top: 2em;
+    }
+
+    .popup__close {
+        top: 0.3em;
+        right: 0.5em;
+    }
 }
 
 @media screen and (max-width: 610px) {
@@ -982,6 +1054,16 @@ main {
 
     .gal {
         font-size: 3.7rem;
+    }
+
+    .back-to-top {
+        right: 4rem;
+        bottom: 4rem;
+    }
+
+    .popup__close {
+        top: 0.2em;
+        right: 0.3em;
     }
 }
 
@@ -1117,6 +1199,11 @@ main {
     .gal {
         font-size: 3.4rem;
         margin: 3em 0 0.3em 0;
+    }
+
+    .back-to-top {
+        right: 3rem;
+        bottom: 3rem;
     }
 }
 
