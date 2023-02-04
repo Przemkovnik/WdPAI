@@ -1,0 +1,154 @@
+/* main section */
+.title {
+    margin: 2em auto 1em;
+    text-align: center;
+}
+
+.wrapper-personnel {
+    max-width: 75vw;
+    margin: 5em auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2em;
+}
+
+.person {
+    box-shadow: 0em 0.8em 2.4em 0em rgb(0, 0, 0, 0.5);
+    float: left;
+    width: 33em;
+    height: 28em;
+    position: relative;
+    margin: 2em;
+    border-radius: 2em;
+}
+
+.front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: all 0.6s ease;
+}
+
+.front img {
+    width: 100%;
+    height: 100%;
+    border-radius: 2em;
+}
+
+.back {
+    background: linear-gradient(to bottom right, rgba(54, 25, 153, 0.5), rgba(120, 255, 241, 1));
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 0.5em solid #222;
+    z-index: -2;
+    box-sizing: border-box;
+    border-radius: 2em;
+}
+
+.pname {
+    font-weight: bold;
+    font-size: 2.2rem;
+}
+
+.description {
+    margin: 1em 0;
+}
+
+.back-content {
+    padding: 0 8em;
+}
+
+.specialisation .fa {
+    font-weight: bold;
+    font-size: 2.2rem;
+}
+
+.specialisation p {
+    font-weight: bold;
+}
+
+/* hover effect on person */
+
+.person .back-content {
+    transform: scale(0);
+    opacity: 0;
+    transition: transform 1s, opacity 1s ease;
+}
+
+.person:hover .front {
+    width: 10em;
+    height: 10em;
+    left: calc(100% - 5em);
+    top: calc(50% - 5em);
+}
+
+.person:hover .front img {
+    border-radius: 5em;
+    border: 1px solid #333;
+}
+
+.person:hover .back-content {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* media queries */
+
+@media screen and (max-width: 1013px) {
+    .wrapper-personnel {
+        max-width: 95vw;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .title {
+        font-size: 3.7rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .title {
+        font-size: 3.1rem;
+        margin: 3em auto 0.3em;
+    }
+
+    .wrapper-personnel {
+        margin-top: 0em;
+    }
+
+    .person {
+        width: 30em;
+        height: 25em;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    .title {
+        font-size: 2.6rem;
+    }
+    
+    .person {
+        width: 25em;
+        height: 20em;
+    }
+
+    .pname {
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+        
+    .specialisation .fa {
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+}
