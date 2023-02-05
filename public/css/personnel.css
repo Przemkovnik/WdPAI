@@ -1,4 +1,8 @@
 /* main section */
+main {
+    all: unset;
+}
+
 .title {
     margin: 2em auto 1em;
     text-align: center;
@@ -136,7 +140,7 @@
     .title {
         font-size: 2.6rem;
     }
-    
+
     .person {
         width: 25em;
         height: 20em;
