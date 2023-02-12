@@ -55,6 +55,7 @@ input, .button3 {
 
 input {
     width: 100%;
+    transition: border-color 1s ease;
 }
 
 label {
@@ -67,6 +68,12 @@ label {
     top: 50%;
     transform: translateY(-50%);
     transition: left 0.9s, opacity 0.9s;
+}
+
+.no-valid {
+    border: 3px solid red;
+    border-radius: 1em;
+    outline: none;
 }
 
 input:focus + label,

@@ -1,0 +1,331 @@
+/* base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    all: unset;
+}
+  
+body {
+    height: 100vh;
+    position: relative;
+}
+
+/* main section */
+
+.master-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 10em;
+    margin-bottom: 3em;
+    transition: all 0.5s ease;
+}
+  
+.reg-container {
+    width: 65em;
+    background: linear-gradient(
+        to top right,
+        rgba(54, 25, 153, 0.5),
+        rgba(120, 255, 241, 0.5)
+    );
+    border-radius: 2em;
+    box-shadow: 0.3em 0.8em 2.4em 0em rgb(0, 0, 0, 0.3);
+    color: #FFF;
+    transition: all 0.5s ease;
+}
+  
+h2 {
+    font-size: 2.3rem;
+    text-align: center;
+    margin-bottom: 1em;
+}
+  
+.registration-form {
+    padding: 2.5em 3.5em;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.5s ease;
+}
+  
+.field-control {
+    margin-bottom: 0.5em;
+    padding-bottom: 0.5em;
+}
+  
+.field-control label {
+    display: block;
+    margin-bottom: 0.5em;
+    color: #fff;
+}
+  
+.field-control input {
+    width: 100%;
+    padding: 1em;
+    border: 1px solid #fff;
+    border-radius: 1em;
+    background: linear-gradient( to left, rgba(255,255,255,0.1), rgba(255,255,255,0.25) );
+    font-size: 1.5rem;
+    color: #fff;
+    box-shadow: 0.2em 0.5em 0.5em 0em rgb(0, 0, 0, 0.18);
+    outline: none;
+
+    transition: box-shadow 0.5s, border 0.1s ease;
+}
+
+.field-control input:hover {
+    box-shadow: 0.2em 0.5em 0.5em 0em rgba(0, 0, 0, 0.30);
+}
+
+.field-control input:focus {  
+    box-shadow: 0.2em 0.5em 0.5em 0em rgba(0, 0, 0, 0.30);
+    border: 2px solid #fff;
+}
+
+.field-control input:active {
+    border: 1px solid #fff;
+}
+  
+.field-control input::placeholder {
+    color: #fff;
+}
+  
+.field-control input.success {
+    border: 3px solid #02c00c;
+}
+  
+.field-control input.error {
+    border: 3px solid #ff1900;
+}
+  
+.field-control span {
+    display: inline-block;
+    color:  #ff1900;;
+    visibility: hidden;
+}
+  
+.field-control span.success {
+    color: #02c00c;
+}
+  
+.field-control span.error {
+    color:  #ff1900;;
+    visibility: visible;
+}
+  
+.registration-form .register-button {
+    padding: 1em;
+    margin: 1em auto 0em;
+    width: 35%;
+    transition: all 0.5s ease;
+    border: none;
+    border-radius: 2em;
+    outline: none;
+    background: linear-gradient(
+        to top right,
+        rgba(54, 25, 153, 0.5),
+        rgba(120, 255, 241, 0.5)
+    );
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.6rem;
+    box-shadow: 0.2em 0.5em 0.5em 0em rgb(0, 0, 0, 0.18);
+    transition: background-color 1s ease, box-shadow 0.5s ease;
+}
+  
+.register-button:hover, .register-button:focus {
+    background: #02c00c;
+    box-shadow: 0.2em 0.5em 0.5em 0em rgba(0, 0, 0, 0.30);
+}
+
+.foot {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    width: 100%;
+}
+
+/* media queries */
+
+@media screen and ( max-width: 970px ) {
+    body {
+        height: auto;
+        position: static;
+    }
+
+    * {
+        position: relative;
+    }
+
+    .master-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 10em;
+        margin-bottom: 10em;
+    }
+
+    .foot {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        width: 100%;
+    }
+}
+
+@media screen and ( max-height: 900px ) {
+    .master-container {
+        margin-top: 7em;
+    }
+
+    .reg-container {
+        width: 55em;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .reg-container {
+        width: 45em;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .reg-container {
+        width: 40em;
+    }
+
+    .registration-form .register-button {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .reg-container {
+        width: 35em;
+    }
+
+    .registration-form .register-button {
+        width: 50%;
+        margin: 0.3em auto 0em;
+    }
+
+    .registration-form {
+        padding: 1.5em 2.5em;
+    }
+}
+
+@media screen and (max-width: 395px) {
+    .reg-container {
+        width: 30em;
+    }
+
+    .registration-form .register-button {
+        width: 50%;
+        margin: 0.3em auto 0em;
+        padding: 0.7em;
+        font-size: 1.4rem;
+    }
+
+    .registration-form {
+        padding: 1.5em 2.5em;
+    }
+}
+
+
+@media screen and ( max-height: 820px ) {
+    .master-container {
+        margin-top: 5em;
+    }
+}
+
+@media screen and ( max-height: 800px ) {
+    .master-container {
+        margin-top: 3em;
+    }
+}
+
+@media screen and ( max-height: 770px ) {
+    .master-container {
+        margin-top: 2em;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+        margin-bottom: 0.9em;
+    }
+      
+    .registration-form {
+        padding: 2.3em 3.5em;
+    }
+      
+    .field-control {
+        margin-bottom: 0.4em;
+        padding-bottom: 0.4em;
+    }
+      
+    .field-control label {
+        margin-bottom: 0.4em;
+    }
+      
+    .field-control input {
+        padding: 0.9em;
+        font-size: 1.4rem;
+    }
+      
+    .registration-form .register-button {
+        padding: 0.9em;
+        margin: 0em auto 0em;
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and ( max-height: 700px ) {
+    .registration-form {
+        padding: 1.5em 3.5em;
+    }
+      
+    .field-control {
+        margin-bottom: 0em;
+        padding-bottom: 0em;
+    }
+      
+    .field-control label {
+        margin-bottom: 0em;
+    }
+}
+
+@media screen and ( max-height: 625px ) {
+    .master-container {
+        margin-top: 1em;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+        margin-bottom: 0.5em;
+    }
+      
+
+    .field-control input {
+        padding: 0.7em;
+        font-size: 1.2rem;
+    }
+      
+    .registration-form .register-button {
+        padding: 0.7em;
+        font-size: 1.3rem;
+        width: 30%;
+    } 
+}
+
+@media screen and ( max-height: 820px ) and (max-width: 970px ) {
+    .master-container {
+        margin-top: 5em;
+    }   
+
+    .registration-form .register-button {
+        width: 50%;
+    } 
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@200;400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <link rel="stylesheet" type="text/css" href="../css/register.css">
+        <script defer src="../js/global.js"></script>
+        <script defer src="../js/validation/form_field.js"></script>
+        <script defer src="../js/validation/form_validator.js"></script>
+        <script defer src="../js/validation/app.js"></script>
+        <title>REGISTER PAGE</title>
+    </head>
+    <body>
+        <div class="overlay"></div>
+            <!-- header section -->
+                <header>
+                    <a class="logo" href="home.html"><img src="../img/logo.svg" alt="SUPERB-MED LOGO"></a>
+                    <nav>
+                        <ul>
+                            <li><a href="home.html">HOME</a></li>
+                            <li><a href="login.html" class="active">LOGIN</a></li>
+                            <li><a href="personnel.html">PERSONEL</a></li>
+                            <li><a href="contact.html">KONTAKT</a></li>
+                        </ul>
+                    </nav>
+                </header>
+            <!-- main section -->
+                <div class="grow">
+                    <main>
+                        <div class="master-container">
+                            <div class="reg-container">
+                                <form novalidate autocomplete="off" id="form" class="registration-form">
+                                    <h2>Rejestracja</h2>
+                                    <div class="field-control">
+                                        <label for="username">Nazwa użytkownika</label>
+                                        <input type="text" id="username" minlength="6" maxlength="35"
+                                        placeholder="Wpisz nazwę użytwkonika" >
+                                        <span>Błąd</span>
+                                    </div>
+                                    <div class="field-control">
+                                        <label for="email">Email</label>
+                                        <input type="email" id="email" 
+                                        placeholder="Wpisz email" >
+                                        <span>Błąd</span>
+                                    </div>
+                                    <div class="field-control">
+                                        <label for="password">Hasło</label> 
+                                        <input type="password" id="password" minlength="8" maxlength="35"
+                                        placeholder="Wpisz hasło" >
+                                        <span>Błąd</span>
+                                    </div>
+                                    <div class="field-control">
+                                        <label for="password2">Hasło ponownie</label> 
+                                        <input type="password" id="password2" minlength="8" maxlength="35"
+                                        data-match-witch-password-id="#password"
+                                        placeholder="Wpisz hasło ponownie" >
+                                        <span>Błąd</span>
+                                    </div>
+                                    <button class="register-button" type="submit">Zarejestruj się</button>
+                                </form>
+                            </div>
+                        </div>
+                    </main>
+                </div>
+        <!-- footer section -->
+            <div class="foot">
+                <footer class="footer">
+                    <div class="container">
+                        Przemyslaw Bryla &copy; 2023
+                    </div>
+                </footer>
+            </div>
+        <!-- cookies banner section -->
+            <section class="cookies-banner">
+                <div class="container">
+                    <div class="cookies-banner-text">
+                        <h1>Ta strona używa plików cookies.</h1>
+                        <p>Zamykając ten baner wyrażasz zgodę na zbieranie danych o Twoich aktywnościach prowadzonych na stronie.</p>
+                    </div>
+                    <div class="cookies-banner-button">
+                        <a href="#" class="button button-orange button2">Zamknij</a>
+                    </div>
+                </div>
+            </section>
+        <!-- back to the top section -->
+            <button class="back-to-top hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="back-to-top-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11l5-5m0 0l5 5m-5-5v12" />
+                </svg>
+            </button>
+    </body>
+</html>
