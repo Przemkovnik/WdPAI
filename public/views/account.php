@@ -7,15 +7,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@200;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <script defer src="../js/global.js"></script>
+    <link rel="stylesheet" type="text/css" href="public/css/style.css">
+    <script defer src="/../public/js/global.js"></script>
     <title>ACCOUNT PAGE</title>
 </head>
 <body>
     <div class="overlay"></div>
     <div class="container">
         <header>
-            <a href="account.html"><img src="../img/logo.svg" alt="SUPERB-MED LOGO"></a>
+            <a href="account.html"><img src="public/img/logo.svg" alt="SUPERB-MED LOGO"></a>
         </header>
 
     </div>

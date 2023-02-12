@@ -7,22 +7,22 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@200;400;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="../css/style.css">
-        <link rel="stylesheet" type="text/css" href="../css/personnel.css">
-        <script defer src="../js/global.js"></script>
+        <link rel="stylesheet" type="text/css" href="public/css/style.css">
+        <link rel="stylesheet" type="text/css" href="public/css/personnel.css">
+        <script defer src="/../public/js/global.js"></script>
         <title>PERSONNEL PAGE</title>
     </head>
     <body>
         <div class="overlay"></div>
         <!-- header section -->
             <header>
-                <a class="logo" href="home.html"><img src="../img/logo.svg" alt="SUPERB-MED LOGO"></a>
+                <a class="logo" href="home.php"><img src="public/img/logo.svg" alt="SUPERB-MED LOGO"></a>
                 <nav>
                     <ul>
-                        <li><a href="home.html">HOME</a></li>
-                        <li><a href="login.html">LOGIN</a></li>
+                        <li><a href="home.php">HOME</a></li>
+                        <li><a href="login.php">LOGIN</a></li>
                         <li><a href="personnel.html" class="active">PERSONEL</a></li>
-                        <li><a href="contact.html">KONTAKT</a></li>
+                        <li><a href="contact.php">KONTAKT</a></li>
                     </ul>
                 </nav>
             </header>
@@ -33,7 +33,7 @@
                     <div class="wrapper-personnel">
                         <div class="person">
                             <div class="front">
-                                <img src="../img/personnel/1.jpeg" alt="person1 image">
+                                <img src="public/img/personnel/1.jpeg" alt="person1 image">
                             </div>
                             <div class="back">
                                 <div class="back-content">
@@ -46,7 +46,7 @@
                         </div>
                         <div class="person">
                             <div class="front">
-                                <img src="../img/personnel/2.jpg" alt="person2 image">
+                                <img src="public/img/personnel/2.jpg" alt="person2 image">
                             </div>
                             <div class="back">
                                 <div class="back-content">
@@ -59,7 +59,7 @@
                         </div>
                         <div class="person">
                             <div class="front">
-                                <img src="../img/personnel/5.jpg" alt="person3 image">
+                                <img src="public/img/personnel/5.jpg" alt="person3 image">
                             </div>
                             <div class="back">
                                 <div class="back-content">
@@ -72,7 +72,7 @@
                         </div>
                         <div class="person">
                             <div class="front">
-                                <img src="../img/personnel/3.jpg" alt="person4 image">
+                                <img src="public/img/personnel/3.jpg" alt="person4 image">
                             </div>
                             <div class="back">
                                 <div class="back-content">
@@ -85,7 +85,7 @@
                         </div>
                         <div class="person">
                             <div class="front">
-                                <img src="../img/personnel/4.jpg" alt="person5 image">
+                                <img src="public/img/personnel/4.jpg" alt="person5 image">
                             </div>
                             <div class="back">
                                 <div class="back-content">
@@ -98,7 +98,7 @@
                         </div>
                         <div class="person">
                             <div class="front">
-                                <img src="../img/personnel/6.jpg" alt="person6 image">
+                                <img src="public/img/personnel/6.jpg" alt="person6 image">
                             </div>
                             <div class="back">
                                 <div class="back-content">
@@ -111,7 +111,7 @@
                         </div>
                         <div class="person">
                             <div class="front">
-                                <img src="../img/personnel/nurse-1.jpg" alt="person7 image">
+                                <img src="public/img/personnel/nurse-1.jpg" alt="person7 image">
                             </div>
                             <div class="back">
                                 <div class="back-content">
@@ -124,7 +124,7 @@
                         </div>
                         <div class="person">
                             <div class="front">
-                                <img src="../img/personnel/nurse-2.jpg" alt="person8 image">
+                                <img src="public/img/personnel/nurse-2.jpg" alt="person8 image">
                             </div>
                             <div class="back">
                                 <div class="back-content">
@@ -137,7 +137,7 @@
                         </div>
                         <div class="person">
                             <div class="front">
-                                <img src="../img/personnel/nurse-3.jpg" alt="person9 image">
+                                <img src="public/img/personnel/nurse-3.jpg" alt="person9 image">
                             </div>
                             <div class="back">
                                 <div class="back-content">
@@ -150,7 +150,7 @@
                         </div>
                         <div class="person">
                             <div class="front">
-                                <img src="../img/personnel/7.jpg" alt="person10 image">
+                                <img src="public/img/personnel/7.jpg" alt="person10 image">
                             </div>
                             <div class="back">
                                 <div class="back-content">
@@ -163,7 +163,7 @@
                         </div>
                         <div class="person">
                             <div class="front">
-                                <img src="../img/personnel/8.jpg" alt="person11 image">
+                                <img src="public/img/personnel/8.jpg" alt="person11 image">
                             </div>
                             <div class="back">
                                 <div class="back-content">

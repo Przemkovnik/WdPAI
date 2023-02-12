@@ -7,25 +7,25 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@200;400;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="../css/style.css">
-        <link rel="stylesheet" type="text/css" href="../css/register.css">
-        <script defer src="../js/global.js"></script>
-        <script defer src="../js/validation/form_field.js"></script>
-        <script defer src="../js/validation/form_validator.js"></script>
-        <script defer src="../js/validation/app.js"></script>
+        <link rel="stylesheet" type="text/css" href="public/css/style.css">
+        <link rel="stylesheet" type="text/css" href="public/css/register.css">
+        <script defer src="/../public/js/global.js"></script>
+        <script defer src="/../public/js/validation/form_field.js"></script>
+        <script defer src="/../public/js/validation/form_validator.js"></script>
+        <script defer src="/../public/js/validation/app.js"></script>
         <title>REGISTER PAGE</title>
     </head>
     <body>
         <div class="overlay"></div>
             <!-- header section -->
                 <header>
-                    <a class="logo" href="home.html"><img src="../img/logo.svg" alt="SUPERB-MED LOGO"></a>
+                    <a class="logo" href="home.php"><img src="public/img/logo.svg" alt="SUPERB-MED LOGO"></a>
                     <nav>
                         <ul>
-                            <li><a href="home.html">HOME</a></li>
-                            <li><a href="login.html" class="active">LOGIN</a></li>
-                            <li><a href="personnel.html">PERSONEL</a></li>
-                            <li><a href="contact.html">KONTAKT</a></li>
+                            <li><a href="home.php">HOME</a></li>
+                            <li><a href="login.php" class="active">LOGIN</a></li>
+                            <li><a href="personnel.php">PERSONEL</a></li>
+                            <li><a href="contact.php">KONTAKT</a></li>
                         </ul>
                     </nav>
                 </header>

@@ -7,21 +7,21 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@200;400;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="../css/style.css">
-        <link rel="stylesheet" type="text/css" href="../css/contact.css">
-        <script defer src="../js/global.js"></script>
+        <link rel="stylesheet" type="text/css" href="public/css/style.css">
+        <link rel="stylesheet" type="text/css" href="public/css/contact.css">
+        <script defer src="/../public/js/global.js"></script>
         <title>CONTACT PAGE</title>
     </head>
     <body>
         <div class="overlay"></div>
         <!-- header section -->
             <header>
-                <a class="logo" href="home.html"><img src="../img/logo.svg" alt="SUPERB-MED LOGO"></a>
+                <a class="logo" href="home.php"><img src="public/img/logo.svg" alt="SUPERB-MED LOGO"></a>
                 <nav>
                     <ul>
-                        <li><a href="home.html">HOME</a></li>
-                        <li><a href="login.html">LOGIN</a></li>
-                        <li><a href="personnel.html">PERSONEL</a></li>
+                        <li><a href="home.php">HOME</a></li>
+                        <li><a href="login.php">LOGIN</a></li>
+                        <li><a href="personnel.php">PERSONEL</a></li>
                         <li><a href="contact.html" class="active">KONTAKT</a></li>
                     </ul>
                 </nav>

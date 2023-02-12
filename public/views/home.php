@@ -7,22 +7,22 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@200;400;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="../css/style.css">
-        <script defer src="../js/global.js"></script>
-        <script defer src="../js/gallery.js"></script>
+        <link rel="stylesheet" type="text/css" href="public/css/style.css">
+        <script defer src="/../public/js/global.js"></script>
+        <script defer src="/../public/js/gallery.js"></script>
         <title>HOME PAGE</title>
     </head>
     <body>
         <div class="overlay"></div>
         <!-- header section -->
             <header>
-                <a class="logo" href="home.html"><img src="../img/logo.svg" alt="SUPERB-MED LOGO"></a>
+                <a class="logo" href="home.html"><img src="public/img/logo.svg" alt="SUPERB-MED LOGO"></a>
                 <nav>
                     <ul>
                         <li><a href="home.html" class="active">HOME</a></li>
-                        <li><a href="login.html">LOGIN</a></li>
-                        <li><a href="personnel.html">PERSONEL</a></li>
-                        <li><a href="contact.html">KONTAKT</a></li>
+                        <li><a href="login.php">LOGIN</a></li>
+                        <li><a href="personnel">PERSONEL</a></li>
+                        <li><a href="contact.php">KONTAKT</a></li>
                     </ul>
                 </nav>
             </header>
@@ -36,8 +36,8 @@
                                 Nasza wykwalifikowana kadra podoła każdemu medycznemu wyzwaniu. Zgłoś się do nas już dziś! 
                             </p>
                             <div class="cta-btns">
-                                <a href="register.html" class="primary-cta">ZAŁÓŻ NOWE KONTO</a>
-                                <a href="personnel.html" class="secondary-cta">
+                                <a href="register.php" class="primary-cta">ZAŁÓŻ NOWE KONTO</a>
+                                <a href="personnel.php" class="secondary-cta">
                                     <span>Poznaj nasz zespół '23</span>
                                     <svg viewBox="0 0 19 9" fill="none">
                                         <path d="M18.3536 4.85355C18.5488 4.65829 18.5488 4.34171 18.3536 4.14645L15.1716 0.964466C14.9763 0.769204 14.6597 0.769204 14.4645 0.964466C14.2692 1.15973 14.2692 1.47631 14.4645 1.67157L17.2929 4.5L14.4645 7.32843C14.2692 7.52369 14.2692 7.84027 14.4645 8.03553C14.6597 8.2308 14.9763 8.2308 15.1716 8.03553L18.3536 4.85355ZM0 5H18V4H0V5Z" fill="black"/>
@@ -93,15 +93,15 @@
                 <div class="container2">
                     <h1 class="gal">Galeria</h1>
                     <ul class="gallery">
-                        <li class="thumbnail"><img tabindex="0" src="../img/gallery/1.jpg" alt=""></li>
-                        <li class="thumbnail"><img tabindex="0" src="../img/gallery/2.jpg" alt=""></li>
-                        <li class="thumbnail"><img tabindex="0" src="../img/gallery/3.jpg" alt=""></li>
-                        <li class="thumbnail"><img tabindex="0" src="../img/gallery/4.jpg" alt=""></li>
-                        <li class="thumbnail"><img tabindex="0" src="../img/gallery/5.jpg" alt=""></li>
-                        <li class="thumbnail"><img tabindex="0" src="../img/gallery/6.jpg" alt=""></li>
-                        <li class="thumbnail"><img tabindex="0" src="../img/gallery/7.jpg" alt=""></li>
-                        <li class="thumbnail"><img tabindex="0" src="../img/gallery/8.jpg" alt=""></li>
-                        <li class="thumbnail"><img tabindex="0" src="../img/gallery/9.jpg" alt=""></li>
+                        <li class="thumbnail"><img tabindex="0" src="public/img/gallery/1.jpg" alt=""></li>
+                        <li class="thumbnail"><img tabindex="0" src="public/img/gallery/2.jpg" alt=""></li>
+                        <li class="thumbnail"><img tabindex="0" src="public/img/gallery/3.jpg" alt=""></li>
+                        <li class="thumbnail"><img tabindex="0" src="public/img/gallery/4.jpg" alt=""></li>
+                        <li class="thumbnail"><img tabindex="0" src="public/img/gallery/5.jpg" alt=""></li>
+                        <li class="thumbnail"><img tabindex="0" src="public/img/gallery/6.jpg" alt=""></li>
+                        <li class="thumbnail"><img tabindex="0" src="public/img/gallery/7.jpg" alt=""></li>
+                        <li class="thumbnail"><img tabindex="0" src="public/img/gallery/8.jpg" alt=""></li>
+                        <li class="thumbnail"><img tabindex="0" src="public/img/gallery/9.jpg" alt=""></li>
                     </ul>
                     <div class="popup hidden">
                         <button aria-label="Close popup" class="popup__close">X</button>

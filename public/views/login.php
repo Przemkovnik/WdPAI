@@ -7,23 +7,23 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@200;400;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="../css/style.css">
-        <link rel="stylesheet" type="text/css" href="../css/login.css">
-        <script defer src="../js/global.js"></script>
-        <script defer src="../js/validation/script.js"></script>
+        <link rel="stylesheet" type="text/css" href="public/css/style.css">
+        <link rel="stylesheet" type="text/css" href="public/css/login.css">
+        <script defer src="/../public/js/global.js"></script>
+        <script defer src="/../public/js/validation/script.js"></script>
         <title>LOGIN PAGE</title>
     </head>
     <body>
         <div class="overlay"></div>
         <!-- header section -->
             <header>
-                <a class="logo" href="home.html"><img src="../img/logo.svg" alt="SUPERB-MED LOGO"></a>
+                <a class="logo" href="home.php"><img src="public/img/logo.svg" alt="SUPERB-MED LOGO"></a>
                 <nav>
                     <ul>
-                        <li><a href="home.html">HOME</a></li>
+                        <li><a href="home.php">HOME</a></li>
                         <li><a href="login.html" class="active">LOGIN</a></li>
-                        <li><a href="personnel.html">PERSONEL</a></li>
-                        <li><a href="contact.html">KONTAKT</a></li>
+                        <li><a href="personnel.php">PERSONEL</a></li>
+                        <li><a href="contact.php">KONTAKT</a></li>
                     </ul>
                 </nav>
             </header>
@@ -31,18 +31,26 @@
             <div class="grow">
                 <main>
                     <div class="wrapper-login">
-                        <form autocomplete="off"> 
+                        <form autocomplete="off" action="login" method="POST">
                             <div class="form__icon" aria-hidden="true"></div>
+                            <div class="message">
+                                <?php if(isset($messages)) {
+                                    foreach ($messages as $message) {
+                                        echo $message;
+                                    }
+                                }
+                                ?>
+                            </div>
                             <div class="form__input-container">
                                 <input id="user" name="email" aria-label="User" type="text" placeholder=" ">
                                 <label for="user">Użytkownik</label>
                             </div>
                             <div class="form__input-container">
-                                <input id="password" aria-label="Password" type="password" placeholder=" ">
+                                <input id="password" name="password" aria-label="Password" type="password" placeholder=" ">
                                 <label for="password">Hasło</label>
                             </div>
-                            <div class="form__spacer" aria-hidden="true"></div> 
-                            <button class="button3">Zaloguj</button>
+                            <div class="form__spacer" aria-hidden="true"></div>
+                            <button type="submit" class="button3">Zaloguj</button>
                         </form>
                     </div>
                 </main>
