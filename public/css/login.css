@@ -38,6 +38,10 @@ form {
     margin-bottom: 1.5em;
 }
 
+.message {
+    font-size: 1rem;
+    /*padding-bottom: 1em;*/
+}
 input, .button3 {
     background: linear-gradient(
         to left,

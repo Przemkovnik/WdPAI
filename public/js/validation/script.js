@@ -13,7 +13,7 @@ function validateEmail() {
     setTimeout(function() {
             markValidation(emailInput, isEmail(emailInput.value));
         },
-        3000
+        1500
     );
 }
 
