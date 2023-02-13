@@ -43,7 +43,7 @@
                             </div>
                             <div class="form__input-container">
                                 <input id="user" name="email" aria-label="User" type="text" placeholder=" ">
-                                <label for="user">Użytkownik</label>
+                                <label for="user">E-mail</label>
                             </div>
                             <div class="form__input-container">
                                 <input id="password" name="password" aria-label="Password" type="password" placeholder=" ">

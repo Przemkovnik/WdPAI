@@ -43,7 +43,11 @@ h2 {
     text-align: center;
     margin-bottom: 1em;
 }
-  
+
+.messages {
+    text-align: center;
+}
+
 .registration-form {
     padding: 2.5em 3.5em;
     display: flex;
