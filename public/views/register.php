@@ -34,31 +34,42 @@
                     <main>
                         <div class="master-container">
                             <div class="reg-container">
-                                <form novalidate autocomplete="off" id="form" class="registration-form">
+                                <form novalidate autocomplete="off" id="form" class="registration-form" action="register" method="POST">
                                     <h2>Rejestracja</h2>
+
+                                    <div class="messages">
+                                        <?php
+                                        if(isset($messages)){
+                                            foreach($messages as $message) {
+                                                echo $message;
+                                            }
+                                        }
+                                        ?>
+                                    </div>
+
                                     <div class="field-control">
-                                        <label for="username">Nazwa użytkownika</label>
-                                        <input type="text" id="username" minlength="6" maxlength="35"
-                                        placeholder="Wpisz nazwę użytwkonika" >
+                                        <label for="username">Imię Nazwisko</label>
+                                        <input name="legal_name" type="text" id="username" minlength="6" maxlength="35"
+                                        placeholder="Wpisz Imię Nazwisko" >
                                         <span>Błąd</span>
                                     </div>
                                     <div class="field-control">
                                         <label for="email">Email</label>
-                                        <input type="email" id="email" 
+                                        <input name="email" type="email" id="email" 
                                         placeholder="Wpisz email" >
                                         <span>Błąd</span>
                                     </div>
                                     <div class="field-control">
                                         <label for="password">Hasło</label> 
-                                        <input type="password" id="password" minlength="8" maxlength="35"
+                                        <input name="password" type="password" id="password" minlength="8" maxlength="35"
                                         placeholder="Wpisz hasło" >
                                         <span>Błąd</span>
                                     </div>
                                     <div class="field-control">
                                         <label for="password2">Hasło ponownie</label> 
-                                        <input type="password" id="password2" minlength="8" maxlength="35"
+                                        <input name="confirmedPassword" type="password" id="password2" minlength="8" maxlength="35"
                                         data-match-witch-password-id="#password"
-                                        placeholder="Wpisz hasło ponownie" >
+                                        placeholder="Powtórz hasło" >
                                         <span>Błąd</span>
                                     </div>
                                     <button class="register-button" type="submit">Zarejestruj się</button>
