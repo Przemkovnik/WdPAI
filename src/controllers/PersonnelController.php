@@ -2,6 +2,7 @@
 
 require_once 'AppController.php';
 require_once __DIR__.'/../models/Personnel.php';
+require_once __DIR__.'/../repositories/PersonnelRepository.php';
 
 class PersonnelController extends AppController {
 
@@ -10,6 +11,14 @@ class PersonnelController extends AppController {
     const UPLOAD_DIRECTORY = '/../public/img/personnel/';
 
     private $messages = [];
+    private $personnelRepository;
+
+    public function __construct()
+    {
+        parent::__construct();
+
+        $this->personnelRepository = new PersonnelRepository();
+    }
 
     public function addPersonnel() {
         
@@ -20,6 +29,8 @@ class PersonnelController extends AppController {
             );
 
             $personnel = new Personnel($_POST['title'], $_POST['description'], $_POST['specialisation'], $_FILES['file']['name']);
+
+            $this->personnelRepository->addPersonnel($personnel);
 
             return $this->render('personnel', ['messages' => $this->messages, 'personnel' => $personnel]);
         }
