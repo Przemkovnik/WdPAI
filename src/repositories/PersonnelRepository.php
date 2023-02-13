@@ -14,7 +14,7 @@ class PersonnelRepository extends Repository {
         $stmt->bindParam('id', $id, PDO::PARAM_INT);
         $stmt->execute();
         $personnel = $stmt->fetch(PDO::FETCH_ASSOC);
-
+        
         if ($personnel == false) {
             return null;
         }
@@ -45,4 +45,30 @@ class PersonnelRepository extends Repository {
             $personnel->getImage()
         ]);
     }
+
+    public function getPersonnels(): array 
+    {
+
+        $result = [];
+
+        $stmt = $this->database->connect()->prepare('
+            SELECT * from "SUPERB_MED".personnel
+        ');
+
+        $stmt->execute();
+
+        $personnels = $stmt->fetchAll(PDO::FETCH_ASSOC); 
+
+        foreach ($personnels as $personnel) {
+            $result[] = new Personnel(
+                $personnel['title'],
+                $personnel['description'],
+                $personnel['specialisation'],
+                $personnel['image']
+            );
+        }
+
+        return $result;
+    }
+
 }

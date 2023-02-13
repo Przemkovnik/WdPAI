@@ -20,6 +20,12 @@ class PersonnelController extends AppController {
         $this->personnelRepository = new PersonnelRepository();
     }
 
+    public function personnel() {
+        $personnels = $this->personnelRepository->getPersonnels();
+
+        $this->render('personnel', ['personnels' => $personnels]);
+    }
+
     public function addPersonnel() {
         
         if($this->isPost() && is_uploaded_file($_FILES['file']['tmp_name']) && $this->validate($_FILES['file'])) {
@@ -32,7 +38,7 @@ class PersonnelController extends AppController {
 
             $this->personnelRepository->addPersonnel($personnel);
 
-            return $this->render('personnel', ['messages' => $this->messages, 'personnel' => $personnel]);
+            return $this->render('personnel', ['messages' => $this->messages, 'personnels' => $this->personnelRepository->getPersonnels()]);
         }
 
         $this->render('addPersonnel', ['messages' => $this->messages]);
