@@ -11,5 +11,6 @@ Router::get('login', 'DefaultController');
 Router::get('personnel', 'DefaultController');
 
 Router::post('login', 'SecurityController');
+Router::post('addPersonnel', 'PersonnelController');
 
 Router::run($path);

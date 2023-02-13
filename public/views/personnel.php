@@ -33,6 +33,19 @@
                     <div class="wrapper-personnel">
                         <div class="person">
                             <div class="front">
+                                <img src="public/img/personnel/<?= $personnel->getImage() ?>">
+                            </div>
+                            <div class="back">
+                                <div class="back-content">
+                                    <div class="pname"><?= $personnel->getTitle() ?></div>
+                                    <div class="description"><?= $personnel->getDescription() ?></div>
+                                    <div class="specialisation"><p><?= $personnel->getSpecialisation() ?></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="person">
+                            <div class="front">
                                 <img src="public/img/personnel/1.jpeg" alt="person1 image">
                             </div>
                             <div class="back">

@@ -32,10 +32,17 @@
                 <div class="wrapper-address">
                     <div>
                         <h3 class="section-heading">Dodaj członka personelu</h3>
-                        <p class="section-description">Podaj jego Imię Nazwisko poprzedzone tytułem naukowym. Następnie uzupełnij opis(max 150 znaków). Po czym załącz jego zdjęcie.</p>
-                        <form>
+                        <p class="section-description">Podaj imię oraz nazwisko poprzedzone tytułem naukowym. Następnie uzupełnij dorobek naukowy. Potem podaj specjalizację. Po czym ałącz aktualne zdjęcie.</p>
+                        <form action="addPersonnel" method="POST" ENCTYPE="multipart/form-data">
+                            <?php if(isset($messages)) {
+                                foreach ($messages as $message) {
+                                    echo $message;
+                                }
+                            }
+                            ?>
                             <input class="input-box" type="text" name="title" placeholder="Tytuł Imię Nazwisko"/>
-                            <textarea class="input-box" name="decription" rows="5" placeholder="Opis dorobku naukowego"></textarea>
+                            <textarea class="input-box" name="description" rows="5" placeholder="Opis dorobku naukowego"></textarea>
+                            <input class="input-box" type="text" name="specialisation" placeholder="Specjalizacja: "/>
                             <input class="input-box" type="file" name="file">
                             <input class="btn-submit" type="submit" value="Dodaj">
                         </form>

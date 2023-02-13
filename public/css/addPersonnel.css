@@ -208,7 +208,7 @@ textarea:focus,
     }
 }
 
-@media screen and (max-height: 710px) {
+@media screen and (max-height: 770px) {
     .section-heading {
         font-size: 2.8rem;
     }
@@ -238,7 +238,7 @@ textarea:focus,
     }
 }
 
-@media screen and (max-height: 600px) {
+@media screen and (max-height: 640px) {
     .wrapper-address {
         margin-top: 4em;
     }
