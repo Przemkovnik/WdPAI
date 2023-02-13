@@ -31,9 +31,11 @@
                 <main>
                     <h1 class="title">Nasz wspaniały personel</h1>
                     <div class="wrapper-personnel">
+
+                    <?php foreach($personnels as $personnel): ?>
                         <div class="person">
                             <div class="front">
-                                <img src="public/img/personnel/<?= $personnel->getImage() ?>">
+                                <img src="public/img/personnel/<?= $personnel->getImage() ?>" alt="person1 image">
                             </div>
                             <div class="back">
                                 <div class="back-content">
@@ -44,6 +46,8 @@
                                 </div>
                             </div>
                         </div>
+                    <?php endforeach; ?>
+
                         <div class="person">
                             <div class="front">
                                 <img src="public/img/personnel/1.jpeg" alt="person1 image">
