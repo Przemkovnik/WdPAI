@@ -71,4 +71,17 @@ class PersonnelRepository extends Repository {
         return $result;
     }
 
+    public function getPersonnelByTitle(string $searchString)
+    {
+        $searchString = '%'.strtolower($searchString).'%';
+
+        $stmt = $this->database->connect()->prepare('
+          SELECT * FROM "SUPERB_MED".personnel WHERE LOWER(title) LIKE :search OR LOWER(description) LIKE :search OR LOWER(specialisation) LIKE :search
+        ');
+
+        $stmt->bindParam(':search', $searchString, PDO::PARAM_STR);
+        $stmt->execute();
+
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 }
