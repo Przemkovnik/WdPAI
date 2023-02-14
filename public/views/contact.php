@@ -31,13 +31,22 @@
                         <div>
                             <h3 class="section-heading">Napisz do nas</h3>
                             <p class="section-description">Jesteśmy gotowi konstruktywnie odpowiedzieć na każde pytanie. Wszelką korespondencję prosimy kierować poprzez poniższy formularz.</p>
-                            <form>
-                                <input class="input-box" type="text" name="name" placeholder="Imię Nazwisko" />
-                                <input class="input-box" type="text" name="phone" placeholder="Numer Telefonu" />
-                                <input class="input-box" type="text" name="subject" placeholder="Temat" />
-                                <input class="input-box" type="email" name="email" placeholder="E-mail" />
-                                <textarea class="input-box">Wiadomość</textarea>
+                            <form action="contact" method="POST">
+                                <input class="input-box" type="text" name="contact_legal_name" placeholder="Imię Nazwisko" />
+                                <input class="input-box" type="text" name="contact_phone" placeholder="Numer Telefonu" />
+                                <input class="input-box" type="email" name="contact_email" placeholder="E-mail" />
+                                <input class="input-box" type="text" name="contact_topic" placeholder="Temat" />
+                                <textarea class="input-box" name="contact_message" placeholder="Wiadomość"></textarea>
                                 <input class="btn-submit" type="submit" value="Wyślij">
+                                <div class="messages">
+                                    <?php
+                                    if(isset($messages)){
+                                        foreach($messages as $message) {
+                                            echo $message;
+                                        }
+                                    }
+                                    ?>
+                                </div>
                             </form>
                         </div>
                     </div>
