@@ -18,17 +18,7 @@
     <body>
         <div class="overlay"></div>
         <!-- header section -->
-            <header>
-                <a class="logo" href="home.php"><img src="public/img/logo.svg" alt="SUPERB-MED LOGO"></a>
-                <nav>
-                    <ul>
-                        <li><a href="home.php">HOME</a></li>
-                        <li><a href="login.php">LOGIN</a></li>
-                        <li><a href="personnel.html" class="active">PERSONEL</a></li>
-                        <li><a href="contact.php">KONTAKT</a></li>
-                    </ul>
-                </nav>
-            </header>
+            <?php include "header.php";?>
         <!-- main section -->
             <div class="grow">
                 <main>
@@ -59,29 +49,11 @@
                 </main>
             </div>
         <!-- footer section -->
-            <footer class="footer">
-                <div class="container">
-                    Przemyslaw Bryla &copy; 2023
-                </div>
-            </footer>
+            <?php include "footer.php";?>
         <!-- cookies banner section -->
-            <section class="cookies-banner">
-                <div class="container">
-                    <div class="cookies-banner-text">
-                        <h1>Ta strona używa plików cookies.</h1>
-                        <p>Zamykając ten baner wyrażasz zgodę na zbieranie danych o Twoich aktywnościach prowadzonych na stronie.</p>
-                    </div>
-                    <div class="cookies-banner-button">
-                        <a href="#" class="button button-orange button2">Zamknij</a>
-                    </div>
-                </div>
-            </section>
+            <?php include "cookiesBanner.php";?>
         <!-- back to the top section -->
-            <button class="back-to-top hidden">
-                <svg xmlns="http://www.w3.org/2000/svg" class="back-to-top-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11l5-5m0 0l5 5m-5-5v12" />
-                </svg>
-            </button>
+            <?php include "arrowTop.php";?>
     </body>
     <template id="personnel-template">
         <div class="person">

@@ -2,6 +2,7 @@
 
 body {
     height: 100vh;
+    position: relative;
 }
 
 /* main section */
@@ -100,8 +101,7 @@ textarea:focus,
     background-color: rgb(170, 170, 170);
 }
 
-
-.foot {
+.footer {
     position: absolute;
     content: "";
     bottom: 0;
