@@ -17,5 +17,6 @@ Router::post('login', 'SecurityController');
 Router::post('addPersonnel', 'PersonnelController');
 Router::post('register', 'SecurityController');
 Router::post('search', 'PersonnelController');
+Router::post('contact', 'ContactController');
 
 Router::run($path);
