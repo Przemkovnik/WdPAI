@@ -12,6 +12,7 @@
         <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
         <script defer src="/../public/js/global.js"></script>
         <script defer src="/../public/js/search_personnel.js"></script>
+        <script defer src="/../public/js/karma_counter.js"></script>
         <title>PERSONNEL PAGE</title>
     </head>
     <body>
@@ -37,7 +38,7 @@
                     </div>
                     <div class="wrapper-personnel">
                         <?php foreach($personnels as $personnel): ?>
-                            <div class="person">
+                            <div class="person" id="<?= $personnel->getId() ?>">
                                 <div class="front">
                                     <img src="public/img/personnel/<?= $personnel->getImage() ?>" alt="person1 image">
                                 </div>
@@ -47,8 +48,8 @@
                                         <div class="description"><?= $personnel->getDescription() ?></div>
                                         <div class="specialisation"><p><?= $personnel->getSpecialisation() ?></p></div>
                                         <div class="social-section">
-                                        <i class="lni lni-smile"> 600</i>
-                                        <i class="lni lni-sad"> 600</i>
+                                            <i class="lni lni-smile"><?= $personnel->getLike() ?></i>
+                                            <i class="lni lni-sad"><?= $personnel->getDislike() ?></i>
                                         </div>
                                     </div>
                                 </div>

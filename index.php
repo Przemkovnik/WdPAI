@@ -17,4 +17,7 @@ Router::post('addPersonnel', 'PersonnelController');
 Router::post('register', 'SecurityController');
 Router::post('search', 'PersonnelController');
 
+Router::get('like', 'PersonnelController');
+Router::get('dislike', 'PersonnelController');
+
 Router::run($path);

@@ -97,6 +97,7 @@ input:focus {
     z-index: -2;
     box-sizing: border-box;
     border-radius: 2em;
+    /* z-index: 1; */
 }
 
 .pname {
