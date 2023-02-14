@@ -5,7 +5,7 @@ require_once 'AppController.php';
 class DefaultController extends AppController {
 
     public function index() {
-        $this->render('login');
+        $this->render('home');
     }
 
     public function login() {
@@ -16,4 +16,7 @@ class DefaultController extends AppController {
         $this->render('home');
     }
 
+    public function contact() {
+        $this->render('contact');
+    }
 }

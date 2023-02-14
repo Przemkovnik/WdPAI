@@ -40,8 +40,8 @@ form {
 
 .message {
     font-size: 1rem;
-    /*padding-bottom: 1em;*/
 }
+
 input, .button3 {
     background: linear-gradient(
         to left,
@@ -59,7 +59,6 @@ input, .button3 {
 
 input {
     width: 100%;
-    transition: border-color 1s ease;
 }
 
 label {

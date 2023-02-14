@@ -9,7 +9,9 @@
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@200;400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="public/css/style.css">
         <link rel="stylesheet" type="text/css" href="public/css/personnel.css">
+        <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
         <script defer src="/../public/js/global.js"></script>
+        <script defer src="/../public/js/search_personnel.js"></script>
         <title>PERSONNEL PAGE</title>
     </head>
     <body>
@@ -30,167 +32,28 @@
             <div class="grow">
                 <main>
                     <h1 class="title">Nasz wspaniały personel</h1>
+                    <div class="search-bar">
+                        <input placeholder="Wyszukaj członka personelu">
+                    </div>
                     <div class="wrapper-personnel">
-
-                    <?php foreach($personnels as $personnel): ?>
-                        <div class="person">
-                            <div class="front">
-                                <img src="public/img/personnel/<?= $personnel->getImage() ?>" alt="person1 image">
-                            </div>
-                            <div class="back">
-                                <div class="back-content">
-                                    <div class="pname"><?= $personnel->getTitle() ?></div>
-                                    <div class="description"><?= $personnel->getDescription() ?></div>
-                                    <div class="specialisation"><p><?= $personnel->getSpecialisation() ?></p>
+                        <?php foreach($personnels as $personnel): ?>
+                            <div class="person">
+                                <div class="front">
+                                    <img src="public/img/personnel/<?= $personnel->getImage() ?>" alt="person1 image">
+                                </div>
+                                <div class="back">
+                                    <div class="back-content">
+                                        <div class="pname"><?= $personnel->getTitle() ?></div>
+                                        <div class="description"><?= $personnel->getDescription() ?></div>
+                                        <div class="specialisation"><p><?= $personnel->getSpecialisation() ?></p></div>
+                                        <div class="social-section">
+                                        <i class="lni lni-smile"> 600</i>
+                                        <i class="lni lni-sad"> 600</i>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    <?php endforeach; ?>
-
-                        <div class="person">
-                            <div class="front">
-                                <img src="public/img/personnel/1.jpeg" alt="person1 image">
-                            </div>
-                            <div class="back">
-                                <div class="back-content">
-                                    <div class="pname">dr Linda Martin</div>
-                                    <div class="description">Ukończyła Uniwersytet Medyczny w Poznaniu. Doktorantka tejże uczelni.</div>
-                                    <div class="specialisation"> <p>Specjalista endokrynolog</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="person">
-                            <div class="front">
-                                <img src="public/img/personnel/2.jpg" alt="person2 image">
-                            </div>
-                            <div class="back">
-                                <div class="back-content">
-                                    <div class="pname">dr Kamil Bąk</div>
-                                    <div class="description">Ukończył Uniwersytet Medyczny w Katowicach. Doktorant tejże uczelni.</div>
-                                    <div class="specialisation"> <p>Specjalista urolog</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="person">
-                            <div class="front">
-                                <img src="public/img/personnel/5.jpg" alt="person3 image">
-                            </div>
-                            <div class="back">
-                                <div class="back-content">
-                                    <div class="pname">dr Antoni Kruk</div>
-                                    <div class="description">Ukończyła Uniwersytet Medyczny w Gdańsku. Doktorantk tejże uczelni.</div>
-                                    <div class="specialisation"> <p>Specjalista ortopeda</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="person">
-                            <div class="front">
-                                <img src="public/img/personnel/3.jpg" alt="person4 image">
-                            </div>
-                            <div class="back">
-                                <div class="back-content">
-                                    <div class="pname">dr Grzegorz Lipka</div>
-                                    <div class="description">Ukończył Uniwersytet Medyczny w Padwie. Wykładowca UJ.</div>
-                                    <div class="specialisation"> <p>Specjalista kardiolog</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="person">
-                            <div class="front">
-                                <img src="public/img/personnel/4.jpg" alt="person5 image">
-                            </div>
-                            <div class="back">
-                                <div class="back-content">
-                                    <div class="pname">dr Wojciech Kowal</div>
-                                    <div class="description">Ukończył Wyższą Szkołę Bractwa Stali. Wykładowca tejże uczelni.</div>
-                                    <div class="specialisation"> <p>Specjalista alergolog</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="person">
-                            <div class="front">
-                                <img src="public/img/personnel/6.jpg" alt="person6 image">
-                            </div>
-                            <div class="back">
-                                <div class="back-content">
-                                    <div class="pname">dr Eliza Wytrwała</div>
-                                    <div class="description">Ukończyła Uniwersytet Medyczny w Szczecinie. Wieloletni praktyk terapii manualnych</div>
-                                    <div class="specialisation"> <p>Specjalista rehabilitant</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="person">
-                            <div class="front">
-                                <img src="public/img/personnel/nurse-1.jpg" alt="person7 image">
-                            </div>
-                            <div class="back">
-                                <div class="back-content">
-                                    <div class="pname">mgr Marta Babiuch</div>
-                                    <div class="description">Ukończyła Uniwersytet Medyczny w Katowicach.</div>
-                                    <div class="specialisation"> <p>Mgr pielęgniarstwa</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="person">
-                            <div class="front">
-                                <img src="public/img/personnel/nurse-2.jpg" alt="person8 image">
-                            </div>
-                            <div class="back">
-                                <div class="back-content">
-                                    <div class="pname">mgr Katarzyna Słoneczko</div>
-                                    <div class="description">Ukończyła Uniwersytet Medyczny w Kutnie.</div>
-                                    <div class="specialisation"> <p>Mgr pielęgniarstwa</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="person">
-                            <div class="front">
-                                <img src="public/img/personnel/nurse-3.jpg" alt="person9 image">
-                            </div>
-                            <div class="back">
-                                <div class="back-content">
-                                    <div class="pname">mgr Zofia Niedbała</div>
-                                    <div class="description">Ukończyła Uniwersytet Medyczny w Szczytnie.</div>
-                                    <div class="specialisation"> <p>Specjalista rehibilitant</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="person">
-                            <div class="front">
-                                <img src="public/img/personnel/7.jpg" alt="person10 image">
-                            </div>
-                            <div class="back">
-                                <div class="back-content">
-                                    <div class="pname">dr Ryszard Kutek</div>
-                                    <div class="description">Ukończył Uniwersytet Medyczny w Poznaniu. Doktorant tejże uczelni.</div>
-                                    <div class="specialisation"> <p>Specjalista okulista</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="person">
-                            <div class="front">
-                                <img src="public/img/personnel/8.jpg" alt="person11 image">
-                            </div>
-                            <div class="back">
-                                <div class="back-content">
-                                    <div class="pname">dr Mirosław Szczęsniak</div>
-                                    <div class="description">Ukończył Uniwersytet Medyczny w Krakowie.</div>
-                                    <div class="specialisation"> <p>Specjalista podolog</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <?php endforeach; ?>
                     </div>
                 </main>
             </div>
@@ -219,4 +82,21 @@
                 </svg>
             </button>
     </body>
+    <template id="personnel-template">
+        <div class="person">
+            <div class="front">
+                <img src="" alt="person1 image">
+            </div>
+            <div class="back">
+                <div class="back-content">
+                    <div class="pname">Title</div>
+                    <div class="description">Description</div>
+                    <div class="specialisation"><p>Specialisation</p></div>
+                    <div class="social-section">
+                    <i class="lni lni-smile"> 0</i>
+                    <i class="lni lni-sad"> 0</i>
+                </div>
+            </div>
+        </div>
+    </template>
 </html>

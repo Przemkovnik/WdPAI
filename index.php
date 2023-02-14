@@ -9,9 +9,12 @@ Router::get('', 'DefaultController');
 Router::get('home', 'DefaultController');
 Router::get('login', 'DefaultController');
 Router::get('personnel', 'PersonnelController');
+Router::get('contact', 'DefaultController');
+
 
 Router::post('login', 'SecurityController');
 Router::post('addPersonnel', 'PersonnelController');
 Router::post('register', 'SecurityController');
+Router::post('search', 'PersonnelController');
 
 Router::run($path);
