@@ -64,7 +64,10 @@ class PersonnelRepository extends Repository {
                 $personnel['title'],
                 $personnel['description'],
                 $personnel['specialisation'],
-                $personnel['image']
+                $personnel['image'],
+                $personnel['like'],
+                $personnel['dislike'],
+                $personnel['id']
             );
         }
 
@@ -83,5 +86,23 @@ class PersonnelRepository extends Repository {
         $stmt->execute();
 
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function like(int $id) {
+    
+        $stmt = $this->database->connect()->prepare('
+            UPDATE "SUPERB_MED".personnel SET "like" = "like" + 1 WHERE id = :id 
+        '); 
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
+    }
+        
+    public function dislike(int $id) { 
+
+        $stmt = $this->database->connect()->prepare('
+            UPDATE "SUPERB_MED".personnel SET dislike = dislike + 1 WHERE id = :id
+            ');
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
     }
 }

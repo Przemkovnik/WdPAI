@@ -10,7 +10,8 @@ Router::get('home', 'DefaultController');
 Router::get('login', 'DefaultController');
 Router::get('personnel', 'PersonnelController');
 Router::get('contact', 'DefaultController');
-
+Router::get('like', 'PersonnelController');
+Router::get('dislike', 'PersonnelController');
 
 Router::post('login', 'SecurityController');
 Router::post('addPersonnel', 'PersonnelController');
