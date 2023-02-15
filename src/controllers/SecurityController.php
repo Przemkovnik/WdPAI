@@ -24,8 +24,7 @@ class SecurityController extends AppController {
 
         $email = $_POST["email"];
 
-        //zastosuj BCRYPT
-        $password = md5($_POST["password"]);
+        $password = $_POST["password"];
 
         $user = $userRepository->getUser($email);
 
@@ -37,7 +36,7 @@ class SecurityController extends AppController {
             return $this->render('login', ['messages' =>['Użytkownik o podanym e-mail\'u nie istnieje!']]);
         }
 
-        if($user->getPassword() !== $password) {
+        if(!password_verify($password, $user->getPassword())) {
             return $this->render('login', ['messages' =>['Podano niepoprawne hasło!']]);
         }
 
@@ -63,7 +62,7 @@ class SecurityController extends AppController {
         }
 
         //BCRYPT
-        $user = new User($email, md5($password), $legal_name);
+        $user = new User($email, password_hash($password, PASSWORD_BCRYPT), $legal_name);
 
 
         $this->userRepository->addUser($user);
