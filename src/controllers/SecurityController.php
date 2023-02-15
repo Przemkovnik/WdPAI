@@ -16,6 +16,8 @@ class SecurityController extends AppController {
 
     public function login()
     {
+        session_start();
+
         $userRepository = new UserRepository();
 
         if(!$this->isPost()) {
@@ -40,9 +42,22 @@ class SecurityController extends AppController {
             return $this->render('login', ['messages' =>['Podano niepoprawne hasło!']]);
         }
 
+        $_SESSION['user_legal_name'] = $user->getLegalName();
+
         $url = "http://$_SERVER[HTTP_HOST]";
-        header("Location: {$url}/personnel");
+        header("Location: {$url}/login");
     }
+
+    // public function logout() {
+        
+    //     session_start();
+
+    //     unset($_SESSION['user_legal_name']);
+    //     session_destroy();
+
+    //     return $this->render('login', ['messages' =>['Poprawnie wylogowano użytkownika z systemu!']]);
+
+    // }
 
     public function register()
     {
@@ -61,9 +76,7 @@ class SecurityController extends AppController {
             return $this->render('register', ['messages' => ['Powtórz hasło poprawnie']]);
         }
 
-        //BCRYPT
         $user = new User($email, password_hash($password, PASSWORD_BCRYPT), $legal_name);
-
 
         $this->userRepository->addUser($user);
 

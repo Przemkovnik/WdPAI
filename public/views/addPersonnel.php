@@ -1,3 +1,9 @@
+<?php
+session_start();
+if(!isset($_SESSION["user_legal_name"]))
+    return $this->render('login', ['messages' =>['Aby móc przeglądać tę zawartość, musisz najpierw zalogować się do systemu!']]);
+?>
+
 <!DOCTYPE html>
 <html lang="pl">
     <head>
