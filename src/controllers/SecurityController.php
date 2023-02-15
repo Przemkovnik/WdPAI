@@ -45,6 +45,9 @@ class SecurityController extends AppController {
         if (empty($_POST["password"])) {
             return $this->render('login', ['messages' => ['Musisz podać hasło!']]);
         }
+        if (strlen($password) < 8) {
+            return $this->render('login', ['messages' => ['Hasło składa się z co najmniej 8 znaków!']]);
+        }
 
         $user = $userRepository->getUser($email);
 
@@ -102,6 +105,9 @@ class SecurityController extends AppController {
                 return $this->render('register', ['messages' => ['Możesz wpisać wyłącznie litery oraz białe znaki!']]);
             }
         }
+        if (strlen($legal_name) < 6) {
+            return $this->render('register', ['messages' => ['Imię Nazwisko składa się z co najmniej 6 znaków!']]);
+        }
 
         $email = $_POST['email'];
         if (empty($_POST["email"])) {
@@ -117,12 +123,17 @@ class SecurityController extends AppController {
         if (empty($_POST["password"])) {
             return $this->render('register', ['messages' => ['Musisz podać hasło!']]);
         }
+        if (strlen($password) < 8) {
+            return $this->render('register', ['messages' => ['Hasło składa się z co najmniej 8 znaków!']]);
+        }
 
         $confirmedPassword = $_POST['confirmedPassword'];
         if (empty($_POST["confirmedPassword"])) {
             return $this->render('register', ['messages' => ['Musisz podać hasło ponownie!']]);
         }
-
+        if (strlen($confirmedPassword) < 8) {
+            return $this->render('register', ['messages' => ['Powtórzone hasło też składa się z co najmniej 8 znaków!']]);
+        }
 
         if ($password !== $confirmedPassword) {
             return $this->render('register', ['messages' => ['Powtórz hasło poprawnie!']]);
