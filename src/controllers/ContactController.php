@@ -38,10 +38,16 @@ class ContactController extends AppController {
                 return $this->render('contact', ['messages' => ['Możesz wpisać wyłącznie litery(bez polskich znaków) oraz białe znaki!']]);
             }
         }
+        if (strlen($contact_legal_name) < 6) {
+            return $this->render('contact', ['messages' => ['Imię Nazwisko składa się z co najmniej 6 znaków!']]);
+        }
 
         $contact_phone = $_POST['contact_phone'];
         if (empty($_POST["contact_phone"])) {
             return $this->render('contact', ['messages' => ['Musisz podać numer telefonu!']]);
+        }
+        if (strlen($contact_phone) < 9) {
+            return $this->render('contact', ['messages' => ['Numer telefonu składa się z co najmniej 9 znaków!']]);
         }
 
         $contact_email = $_POST['contact_email'];
@@ -58,12 +64,17 @@ class ContactController extends AppController {
         if (empty($_POST["contact_topic"])) {
             return $this->render('contact', ['messages' => ['Musisz podać temat wiadomości!']]);
         }
+        if (strlen($contact_topic) < 3) {
+            return $this->render('contact', ['messages' => ['Temat wiadomości musi składać się z co najmniej 3 znaków!']]);
+        }
 
         $contact_message = $_POST['contact_message'];
         if (empty($_POST["contact_message"])) {
             return $this->render('contact', ['messages' => ['Musisz napisać wiadomość!']]);
         }
-
+        if (strlen($contact_message) < 15) {
+            return $this->render('contact', ['messages' => ['Wiadomość musi składać się z co najmniej 15 znaków!']]);
+        }
 
         $contact = new Contact($contact_legal_name, $contact_phone, $contact_email, $contact_topic, $contact_message);
 
