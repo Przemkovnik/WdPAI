@@ -24,9 +24,27 @@ class SecurityController extends AppController {
             return $this->render('login');
         }
 
+        function test_input($data) {
+            $data = trim($data);
+            $data = stripslashes($data);
+            $data = htmlspecialchars($data);
+            return $data;
+        }
+
         $email = $_POST["email"];
+        if (empty($_POST["email"])) {
+            return $this->render('login', ['messages' => ['Musisz podać email!']]);
+        } else {
+            $email = test_input($_POST["email"]);
+            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                return $this->render('login', ['messages' => ['Wpisano niepoprawny format email!']]);
+            }
+        }
 
         $password = $_POST["password"];
+        if (empty($_POST["password"])) {
+            return $this->render('login', ['messages' => ['Musisz podać hasło!']]);
+        }
 
         $user = $userRepository->getUser($email);
 
@@ -67,19 +85,53 @@ class SecurityController extends AppController {
             return $this->render('register');
         }
 
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-        $confirmedPassword = $_POST['confirmedPassword'];
+        function test_input($data) {
+            $data = trim($data);
+            $data = stripslashes($data);
+            $data = htmlspecialchars($data);
+            return $data;
+        }
+
         $legal_name = $_POST['legal_name'];
+        if (empty($_POST["legal_name"])) {
+            return $this->render('register', ['messages' => ['Musisz podać Imię Nazwisko!']]);
+        } 
+        else {
+            $legal_name = test_input($_POST["legal_name"]);
+            if (!preg_match("/^[a-zA-Z-' ]*$/",$legal_name)) {
+                return $this->render('register', ['messages' => ['Możesz wpisać wyłącznie litery oraz białe znaki!']]);
+            }
+        }
+
+        $email = $_POST['email'];
+        if (empty($_POST["email"])) {
+            return $this->render('register', ['messages' => ['Musisz podać email!']]);
+        } else {
+            $email = test_input($_POST["email"]);
+            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                return $this->render('register', ['messages' => ['Wpisano niepoprawny format email!']]);
+            }
+        }
+
+        $password = $_POST['password'];
+        if (empty($_POST["password"])) {
+            return $this->render('register', ['messages' => ['Musisz podać hasło!']]);
+        }
+
+        $confirmedPassword = $_POST['confirmedPassword'];
+        if (empty($_POST["confirmedPassword"])) {
+            return $this->render('register', ['messages' => ['Musisz podać hasło ponownie!']]);
+        }
+
 
         if ($password !== $confirmedPassword) {
-            return $this->render('register', ['messages' => ['Powtórz hasło poprawnie']]);
+            return $this->render('register', ['messages' => ['Powtórz hasło poprawnie!']]);
         }
 
         $user = new User($email, password_hash($password, PASSWORD_BCRYPT), $legal_name);
 
         $this->userRepository->addUser($user);
 
-        return $this->render('login', ['messages' => ['Twoje konto zostało zarejestrowane']]);
+        return $this->render('login', ['messages' => ['Twoje konto zostało zarejestrowane pomyślnie!']]);
     }
 }
