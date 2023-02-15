@@ -3,7 +3,7 @@
                 <nav>
                     <ul>
                         <li><a href="home">HOME</a></li> <!-- class="active" niestety po wyłączeniu headera do osobnego pliku tracimy efekt graficzny -->
-                        <li><a href="login">LOGIN</a></li>
+                        <li><a href="login">KONTO</a></li>
                         <li><a href="personnel">PERSONEL</a></li>
                         <li><a href="contact">KONTAKT</a></li>
                     </ul>
