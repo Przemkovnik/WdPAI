@@ -26,7 +26,6 @@
                             <div class="reg-container">
                                 <form novalidate autocomplete="off" id="form" class="registration-form" action="register" method="POST">
                                     <h2>Rejestracja</h2>
-
                                     <div class="messages">
                                         <?php
                                         if(isset($messages)){
@@ -36,7 +35,6 @@
                                         }
                                         ?>
                                     </div>
-
                                     <div class="field-control">
                                         <label for="username">Imię Nazwisko</label>
                                         <input name="legal_name" type="text" id="username" minlength="6" maxlength="35"
