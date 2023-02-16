@@ -24,7 +24,7 @@
         <!-- form section -->
             <div class="grow">
                 <main>
-                    <?php if(empty($_SESSION['user_legal_name'])) : ?>
+                    <?php if(empty($_SESSION['session_id'])) : ?>
                         <div class="wrapper-login">
                             <form autocomplete="off" action="login" method="POST">
                                 <div class="form__icon" aria-hidden="true"></div>

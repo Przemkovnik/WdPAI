@@ -63,6 +63,7 @@ class SecurityController extends AppController {
             return $this->render('login', ['messages' =>['Podano niepoprawne hasło!']]);
         }
 
+        $_SESSION['session_id'] = $user->getId();
         $_SESSION['user_legal_name'] = $user->getLegalName();
 
         $url = "http://$_SERVER[HTTP_HOST]";
