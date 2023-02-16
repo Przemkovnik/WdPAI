@@ -63,6 +63,44 @@ class SecurityController extends AppController {
             return $this->render('login', ['messages' =>['Podano niepoprawne hasło!']]);
         }
 
+        function encryptCookie( $value ) {
+            $key = hex2bin(openssl_random_pseudo_bytes(4));
+            $cipher = "aes-256-cbc";
+            $ivlen = openssl_cipher_iv_length($cipher);
+            $iv = openssl_random_pseudo_bytes($ivlen);
+            $ciphertext = openssl_encrypt($value, $cipher, $key, 0, $iv);
+            return( base64_encode($ciphertext . '::' . $iv. '::' .$key) );
+        }
+
+        function decryptCookie( $ciphertext ) {
+            $cipher = "aes-256-cbc";
+            list($encrypted_data, $iv,$key) = explode('::', base64_decode($ciphertext));
+            return openssl_decrypt($encrypted_data, $cipher, $key, 0, $iv);
+        }
+
+        if( isset($_SESSION['session_id']) ){
+            $url = "http://$_SERVER[HTTP_HOST]";
+            header("Location: {$url}/login");
+            exit;
+        }else if( isset($_COOKIE['rememberme'] )){
+            $session_id = decryptCookie($_COOKIE['rememberme']);
+            $count = $user->getId();
+            if( $count > 0 ){
+                $_SESSION['session_id'] = $session_id;
+                $url = "http://$_SERVER[HTTP_HOST]";
+                header("Location: {$url}/login");
+                exit;
+            }
+        }
+
+        $session_id = $user->getId();
+
+        if( isset($_POST['rememberme']) ){
+            $days = 1;
+            $value = encryptCookie($session_id);
+            setcookie ("rememberme",$value,time()+ ($days * 24 * 60 * 60)); 
+        }
+
         $_SESSION['session_id'] = $user->getId();
         $_SESSION['user_legal_name'] = $user->getLegalName();
 
@@ -70,20 +108,8 @@ class SecurityController extends AppController {
         header("Location: {$url}/login");
     }
 
-    // public function logout() {
-        
-    //     session_start();
-
-    //     unset($_SESSION['user_legal_name']);
-    //     session_destroy();
-
-    //     return $this->render('login', ['messages' =>['Poprawnie wylogowano użytkownika z systemu!']]);
-
-    // }
-
     public function register()
     {
-        
 
         if (!$this->isPost()) {
             return $this->render('register');

@@ -32,5 +32,4 @@ class Router {
         $id = $urlParts[1] ?? '';
         $object->$action($id);
     }
-
 }

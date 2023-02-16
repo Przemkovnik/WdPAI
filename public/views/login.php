@@ -21,7 +21,7 @@
         <div class="overlay"></div>
         <!-- header section -->
             <?php include "header.php";?>
-        <!-- form section -->
+        <!-- main section -->
             <div class="grow">
                 <main>
                     <?php if(empty($_SESSION['session_id'])) : ?>
@@ -44,6 +44,9 @@
                                     <input id="password" name="password" aria-label="Password" type="password" placeholder=" ">
                                     <label for="password">Hasło</label>
                                 </div>
+                                <div class="remember_me">
+                                    <div>Zapamiętaj!</div><input type="checkbox" name="rememberme" value="1" />
+                                </div>
                                 <div class="form__spacer" aria-hidden="true"></div>
                                 <button type="submit" class="button3">Zaloguj</button>
                             </form>
@@ -59,9 +62,6 @@
                                 <a href="addPersonnel" class="primary-cta">DODAJ CZŁONKA PERSONELU</a>
                                 <a href="personnel" class="primary-cta">WYSZUKAJ SPECJALISTĘ</a>
                             </div>
-                            <!-- <div class="logout"> 
-                                <button type="submit" class="primary-cta">Wyloguj</button>
-                            </div> -->
                             <a href="logout" class="log">
                                 <div class="logout"> 
                                     <button type="submit" class="primary-cta">Wyloguj</button>

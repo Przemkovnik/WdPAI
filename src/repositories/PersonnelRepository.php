@@ -27,7 +27,8 @@ class PersonnelRepository extends Repository {
         );
     }
 
-    public function addPersonnel(Personnel $personnel): void  {
+    public function addPersonnel(Personnel $personnel): void  
+    {
 
         $date = new DateTime();
         $stmt = $this->database->connect()->prepare('
@@ -50,7 +51,6 @@ class PersonnelRepository extends Repository {
     {
 
         $result = [];
-
         $stmt = $this->database->connect()->prepare('
             SELECT * from "SUPERB_MED".personnel
         ');
@@ -70,7 +70,6 @@ class PersonnelRepository extends Repository {
                 $personnel['id']
             );
         }
-
         return $result;
     }
 

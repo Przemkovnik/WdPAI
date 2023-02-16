@@ -17,7 +17,8 @@ class Database
         $this->database = DATABASE;
     }
 
-    public function connect() {
+    public function connect() 
+    {
 
         try {
             $conn = new PDO(

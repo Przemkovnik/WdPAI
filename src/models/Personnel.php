@@ -46,9 +46,9 @@ class Personnel
         return $this->specialisation;
     }
 
-    public function setSpecialisation(string $description)
+    public function setSpecialisation(string $specialisation)
     {
-        $this->description = $specialisation;
+        $this->specialisation = $specialisation;
     }
 
     public function getImage(): string
