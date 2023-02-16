@@ -23,4 +23,8 @@ class DefaultController extends AppController {
     public function logout() {
         $this->render('logout');
     }
+
+    public function remember() {
+        $this->render('remember');
+    }
 }

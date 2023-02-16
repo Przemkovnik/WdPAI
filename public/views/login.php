@@ -44,6 +44,14 @@
                                     <input id="password" name="password" aria-label="Password" type="password" placeholder=" ">
                                     <label for="password">Hasło</label>
                                 </div>
+                                <div class="remember_me">
+                                    <label for="remember_me">
+                                        <input class="rem_me" type="checkbox" name="remember_me" id="remember_me"
+                                            value="checked" <?= $remember_me ?? '' ?> />
+                                        Zapamiętaj
+                                    </label>
+                                    <small><?= $errors['agree'] ?? '' ?></small>
+                                </div>
                                 <div class="form__spacer" aria-hidden="true"></div>
                                 <button type="submit" class="button3">Zaloguj</button>
                             </form>
@@ -53,7 +61,7 @@
                             <style>
                                 <?php include 'public/css/loginAfter.css'; ?>
                             </style>
-                            <h1>Witaj serdecznie, <strong><?=$_SESSION['user_legal_name']?></strong>!<br> Możesz teraz w pełni korzystać z możlwości naszego serwisu!</h1>
+                            <h1>Witaj serdecznie, <strong><?=$_SESSION['user_legal_name'];?></strong>!<br> Możesz teraz w pełni korzystać z możlwości naszego serwisu!</h1>
                             <p class="subhead">Sprawdź proszę poniższe funkcjonalności!</p>
                             <div class="cta-btns">
                                 <a href="addPersonnel" class="primary-cta">DODAJ CZŁONKA PERSONELU</a>

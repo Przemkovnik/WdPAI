@@ -31,6 +31,31 @@ form {
     text-align: center;
     border-radius: 2em;
     box-shadow: 0.3em 0.8em 2.4em 0em rgb(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.remember_me {
+    position: absolute;
+    font-size: 1rem;
+    bottom: 13em;
+    /* top: 1em; */
+    left: 15em;
+    box-sizing: unset;
+    /* width: 1em; */
+    /* z-index: 1000; */
+}
+
+.remember_me>label {
+    cursor: default;
+}
+    
+.remember_me>label>input{
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.remember_me>label>input:focus{
+    outline: none;
 }
 
 .form__input-container {

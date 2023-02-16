@@ -63,6 +63,12 @@ class SecurityController extends AppController {
             return $this->render('login', ['messages' =>['Podano niepoprawne hasło!']]);
         }
 
+
+        $remember_me = $_POST["remember_me"]; 
+        suhosin_encrypt_cookie()
+
+
+
         $_SESSION['session_id'] = $user->getId();
         $_SESSION['user_legal_name'] = $user->getLegalName();
 

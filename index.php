@@ -19,5 +19,6 @@ Router::post('register', 'SecurityController');
 Router::post('search', 'PersonnelController');
 Router::post('contact', 'ContactController');
 Router::post('logout', 'DefaultController');
+Router::post('remember', 'DefaultController');
 
 Router::run($path);
