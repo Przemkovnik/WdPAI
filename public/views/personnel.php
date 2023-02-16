@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!isset($_SESSION["user_legal_name"]))
+if(!isset($_SESSION["session_id"]))
     return $this->render('login', ['messages' =>['Aby móc przeglądać tę zawartość, musisz najpierw zalogować się do systemu!']]);
 ?>
 
