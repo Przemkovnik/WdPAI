@@ -55,7 +55,7 @@
         <!-- footer section -->
             <?php include "footer.php";?>
         <!-- cookies banner section -->
-            <?php include "cookiesBanner.php";?>
+            <!-- <?php include "cookiesBanner.php";?>  -->
         <!-- back to the top section -->
             <?php include "arrowTop.php";?>
     </body>
