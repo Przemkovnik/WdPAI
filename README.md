@@ -106,6 +106,8 @@ and then rebuild the docker:
 
 | Position | Url |
 |-------------|-----|
+|PersonnelGallery       |http://localhost:8080/personnel|
+|AddPersonnel       |http://localhost:8080/addPersonnel|
 |Admins       |http://localhost:8080/|
 |Doctors      |http://localhost:8080/|
 |Patients     |http://localhost:8080/| 
